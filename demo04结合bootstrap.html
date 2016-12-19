@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="libs/bootstrap.css"/>
+	</head>
+	<body ng-controller="myCtrl">
+		<!--<ul>
+			<li ng-repeat="prov in provinces">
+				{{prov.name}}
+				<ul>
+					<li ng-repeat="city in prov.cities">
+						{{city.name}}
+					</li>
+				</ul>
+			</li>			
+		</ul>-->
+		<div class="panel panel-default">
+  <!-- Default panel contents -->
+		  <div class="panel-heading">Panel heading</div>
+		  <div class="panel-body">
+		    <p>...</p>
+		  </div>
+		
+		  <!-- List group -->
+		  <ul class="list-group">
+		    <li class="list-group-item">Cras justo odio</li>
+		    <li class="list-group-item">Dapibus ac facilisis in</li>
+		    <li class="list-group-item">Morbi leo risus</li>
+		    <li class="list-group-item">Porta ac consectetur ac</li>
+		    <li class="list-group-item">Vestibulum at eros</li>
+		  </ul>
+		</div>
+
+	</body>
+	<script src="libs/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="libs/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="libs/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var app=angular.module("myApp",[]);
+		app.controller("myCtrl",function($scope){
+			var provinces = [
+				{
+					"name":"浙江",
+					"cities":[
+						{"name":"温州"},
+						{"name":"金华"},
+						{"name":"杭州"}						
+					]
+				},
+				{
+					"name":"河南",
+					"cities":[
+						{"name":"郑州"},
+						{"name":"洛阳"},
+						{"name":"新乡"}						
+					]
+				},
+				{
+					"name":"山东",
+					"cities":[
+						{"name":"济南"},
+						{"name":"青岛"},
+						{"name":"德州"}						
+					]
+				}
+			]
+			$scope.provinces=provinces;
+		})
+	</script>
+</html>
